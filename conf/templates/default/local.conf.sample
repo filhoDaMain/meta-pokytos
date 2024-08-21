@@ -15,6 +15,7 @@
 #   - "genericx86"
 #   - "genericx86-64"
 #   - "edgerouter"
+#   - "raspberrypi3"
 #
 MACHINE ??= "qemuarm"
 
