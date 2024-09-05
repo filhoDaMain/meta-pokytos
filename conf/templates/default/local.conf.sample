@@ -32,6 +32,12 @@ SDKMACHINE ?= "x86_64"
 EXTRA_IMAGE_FEATURES ?= "debug-tweaks"
 
 
+#
+# Image type
+#   - kerneldebug: builds an image with support for interactive kernel debugging (kgdb + gdb)
+#
+IMAGE_TYPE = "kerneldebug"
+
 
 
 
