@@ -1,0 +1,13 @@
+python
+import os
+
+gdb.execute('set sysroot ' + os.environ['TARGET_SYSROOT_DIR'])
+gdb.execute('set substitute-path /usr/src/kernel ' + os.environ['KERNEL_SOURCES_DIR'])
+gdb.execute('add-auto-load-safe-path ' + os.environ['KERNEL_BUILD_DIR'])
+gdb.execute('source ' + os.environ['KERNEL_BUILD_DIR'] + '/vmlinux-gdb.py')
+gdb.execute('lx-symbols ' + os.environ['LINUX_BUILD_DIR'])
+
+gdb.execute('set serial baud ' + os.environ['SERIAL_BAUDRATE'])
+gdb.execute('target remote ' + os.environ['SERIAL_DEVICE'])
+
+end

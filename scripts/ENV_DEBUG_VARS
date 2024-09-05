@@ -1,0 +1,23 @@
+# Config these variables accordingly
+
+# SDK environment file
+export SDK_ENV_FILE="/home/$USER/dev/sdks/pokytos-rpi3-env"
+
+# Cross-debugger name without prefixes
+export CROSS_DEBUGGER=arm-poky-linux-gnueabi-gdb
+
+# Serial line configuration
+export SERIAL_BAUDRATE=115200
+export SERIAL_DEVICE=/dev/ttyUSB0
+
+# Path to where target sysroot is installed in the debugger system
+export TARGET_SYSROOT_DIR="/home/$USER/dev/sdks/pokytos-rpi3-sysroots/cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi"
+
+# Path to complete kernel source files
+export KERNEL_SOURCES_DIR="/home/$USER/dev/repos/pokytos-yocto/pokytos/build/tmp/work-shared/raspberrypi3/kernel-source"
+
+# Path to where kernel build artifacts (e.g. vmlinux) can be found
+export KERNEL_BUILD_DIR="/home/$USER/dev/repos/pokytos-yocto/pokytos/build/tmp/work/raspberrypi3-poky-linux-gnueabi/linux-raspberrypi/6.1.77+git/linux-raspberrypi3-standard-build"
+
+# Generic build artifacts such as linux kernel modules from bitbake recipes
+export LINUX_BUILD_DIR="/home/$USER/dev/repos/pokytos-yocto/pokytos/build/tmp/work/raspberrypi3-poky-linux-gnueabi/"
