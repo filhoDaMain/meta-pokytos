@@ -20,4 +20,4 @@ export KERNEL_SOURCES_DIR="/home/$USER/dev/repos/pokytos-yocto/pokytos/build/tmp
 export KERNEL_BUILD_DIR="/home/$USER/dev/repos/pokytos-yocto/pokytos/build/tmp/work/raspberrypi3-poky-linux-gnueabi/linux-raspberrypi/6.1.77+git/linux-raspberrypi3-standard-build"
 
 # Generic build artifacts such as linux kernel modules from bitbake recipes
-export LINUX_BUILD_DIR="/home/$USER/dev/repos/pokytos-yocto/pokytos/build/tmp/work/raspberrypi3-poky-linux-gnueabi/"
+export LINUX_BUILD_DIR="/home/$USER/dev/repos/pokytos-yocto/pokytos/build/tmp/work/raspberrypi3-poky-linux-gnueabi"

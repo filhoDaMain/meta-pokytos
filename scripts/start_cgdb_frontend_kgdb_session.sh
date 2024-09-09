@@ -1,4 +1,7 @@
 #!/bin/bash
+
+# Run this script to start a KGDB session with CGDB as its frontend
+
 clear
 
 echo ""
@@ -25,4 +28,4 @@ echo ""
 # Start GDB in host
 source ENV_DEBUG_VARS
 source ${SDK_ENV_FILE}
-cgdb -d ${CROSS_DEBUGGER} -x gdbinit ${KERNEL_BUILD_DIR}/vmlinux
+cgdb -d ${CROSS_DEBUGGER} -q -x gdbinit ${KERNEL_BUILD_DIR}/vmlinux
