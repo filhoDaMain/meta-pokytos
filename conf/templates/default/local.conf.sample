@@ -32,15 +32,6 @@ SDKMACHINE ?= "x86_64"
 EXTRA_IMAGE_FEATURES ?= "debug-tweaks"
 
 
-#
-# Image type
-#   - developer:    builds a developer image (wi-fi, ssh support, opkg package manager...)
-#   - kerneldebug:  builds a developer image suitable for interactive kernel debugging
-#                   (vmlinux with debug symbols, kgdb support via serial line and gdb scripts)
-#
-IMAGE_TYPE = "developer"
-
-
 
 
 
