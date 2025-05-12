@@ -1,13 +1,14 @@
-SUMMARY = "A small image with console support only"
-
+SUMMARY = "Small image with console support"
 LICENSE = "MIT"
+
 inherit core-image
+IMAGE_LINGUAS = " "
 
-IMAGE_INSTALL += "opkg"
-EXTRA_IMAGE_FEATURES += "ssh-server-dropbear tools-debug"
+IMAGE_FSTYPES= "ext4"
 
-TOOLCHAIN_TARGET_TASK:kerneldebug += "kernel-devsrc kernel-vmlinux"
+IMAGE_INSTALL = "\
+    packagegroup-core-boot \
+"
 
-# Include machine specific flags (if any needed)
-# (silently fails if no machine specific files are found)
-include include/${MACHINE}.inc
+IMAGE_ROOTFS_SIZE ?= "8192"
+IMAGE_ROOTFS_EXTRA_SPACE:append = "${@bb.utils.contains("DISTRO_FEATURES", "systemd", " + 4096", "", d)}"
