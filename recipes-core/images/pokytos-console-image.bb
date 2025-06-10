@@ -4,7 +4,7 @@ LICENSE = "MIT"
 inherit core-image
 IMAGE_LINGUAS = " "
 
-IMAGE_FSTYPES= "ext4"
+IMAGE_FSTYPES= "ext4 wic"
 
 IMAGE_INSTALL = "\
     packagegroup-core-boot \
