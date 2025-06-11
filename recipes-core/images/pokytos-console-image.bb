@@ -4,7 +4,10 @@ LICENSE = "MIT"
 inherit core-image
 IMAGE_LINGUAS = " "
 
-IMAGE_FSTYPES= "ext4 wic"
+IMAGE_FSTYPES = "ext4 wic"
+
+# Remove wic for emulated devices
+IMAGE_FSTYPES:qemuall = "ext4"
 
 IMAGE_INSTALL = "\
     packagegroup-core-boot \
