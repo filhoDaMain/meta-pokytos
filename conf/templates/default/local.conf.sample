@@ -1,22 +1,15 @@
 #
+# Pokytos build configuration.
+# Check the available documentation at:
+# https://github.com/filhoDaMain/pokytos/tree/nanbield/Documentation
+#
+
+
+#
 # Machine Selection (target device)
 #
-# Emulated options:
-#   - "qemuarm"
-#   - "qemuarm64"
-#   - "qemumips"
-#   - "qemumips64"
-#   - "qemuppc"
-#   - "qemux86"
-#   - "qemux86-64"
-#
-# Real Hardware options:
-#   - "beaglebone-yocto"
-#   - "genericx86"
-#   - "genericx86-64"
-#   - "edgerouter"
-#   - "raspberrypi3"
-#
+# List of supported devices:
+# https://github.com/filhoDaMain/pokytos/blob/nanbield/Documentation/chapters/03_supported_devices.md
 MACHINE ??= "qemuarm"
 
 
@@ -27,9 +20,17 @@ SDKMACHINE ?= "x86_64"
 
 
 #
-# Extra image configuration defaults
-#   NOTE: "debug-tweaks" allows booting into root with no password!
+# Extra image configurations
+#
+# NOTE: "debug-tweaks" allows booting into root with no password!
 EXTRA_IMAGE_FEATURES ?= "debug-tweaks"
+
+
+#
+# Kernel debug support
+#
+# Uncomment to enable usage of a kernel configuration that supports debugging with KGDB:
+#KERNEL_DEBUG = "1"
 
 
 
