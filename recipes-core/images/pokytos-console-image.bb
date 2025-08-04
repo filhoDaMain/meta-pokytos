@@ -14,4 +14,13 @@ IMAGE_BOOT_FILES ?= "\
     ${RPI_EXTRA_IMAGE_BOOT_FILES} \
 "
 
+IMAGE_INSTALL += "\
+    networkmanager \
+    networkmanager-nmcli \
+"
+
+IMAGE_FEATURES += "\
+    ssh-server-dropbear \
+"
+
 unset VC4DTBO
