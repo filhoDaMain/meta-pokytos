@@ -4,14 +4,14 @@ LICENSE = "MIT"
 inherit core-image
 IMAGE_LINGUAS = " "
 
-IMAGE_FSTYPES = "ext4 wic"
+unset IMAGE_BOOT_FILES
 
-# Remove wic for emulated devices
-IMAGE_FSTYPES:qemuall = "ext4"
-
-IMAGE_INSTALL = "\
-    packagegroup-core-boot \
+# Include raspberrypi3 upstream kernel DTB
+# //TODO make this in a separate machine specific file
+IMAGE_BOOT_FILES ?= "\
+    ${BOOTFILES_DIR_NAME}/* \
+    bcm2837-rpi-3-a-plus.dtb \
+    ${RPI_EXTRA_IMAGE_BOOT_FILES} \
 "
 
-IMAGE_ROOTFS_SIZE ?= "8192"
-IMAGE_ROOTFS_EXTRA_SPACE:append = "${@bb.utils.contains("DISTRO_FEATURES", "systemd", " + 4096", "", d)}"
+unset VC4DTBO
