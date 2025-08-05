@@ -17,6 +17,8 @@ IMAGE_BOOT_FILES ?= "\
 IMAGE_INSTALL += "\
     networkmanager \
     networkmanager-nmcli \
+    opkg \
+    gdbserver \
 "
 
 IMAGE_FEATURES += "\
