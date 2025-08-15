@@ -10,7 +10,7 @@
 #
 # List of supported devices:
 # https://github.com/filhoDaMain/pokytos/blob/nanbield/Documentation/chapters/03_supported_devices.md
-MACHINE ??= "qemuarm"
+MACHINE ??= "raspberrypi3"
 
 
 #
@@ -24,13 +24,6 @@ SDKMACHINE ?= "x86_64"
 #
 # NOTE: "debug-tweaks" allows booting into root with no password!
 EXTRA_IMAGE_FEATURES ?= "debug-tweaks"
-
-
-#
-# Kernel debug support
-#
-# Uncomment to enable usage of a kernel configuration that supports debugging with KGDB:
-#KERNEL_DEBUG = "1"
 
 
 
@@ -51,6 +44,11 @@ EXTRA_IMAGE_FEATURES ?= "debug-tweaks"
 #
 DISTRO ?= "pokytos"
 
+
+#
+# Alternate config for developer image variant
+#
+BBMULTICONFIG = "developer"
 
 #
 # Where to place downloads
