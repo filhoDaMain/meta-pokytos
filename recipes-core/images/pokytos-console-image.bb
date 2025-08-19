@@ -9,6 +9,15 @@ IMAGE_INSTALL += "\
     networkmanager-nmcli \
     opkg \
     gdbserver \
+    libgpiod-tools \
+"
+
+IMAGE_FEATURES += "\
+    ssh-server-dropbear \
+"
+
+TOOLCHAIN_TARGET_TASK += "\
+    kernel-devsrc \
 "
 
 # Machine specific configurations if needed
