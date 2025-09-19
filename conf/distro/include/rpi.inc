@@ -1,7 +1,11 @@
 # Raspberry common configurations
-
-RPI_USE_U_BOOT:rpi = "1"
-ENABLE_UART:rpi = "1"
+unset VC4DTBO
+RPI_USE_U_BOOT = "1"
+ENABLE_UART = "1"
 
 unset MACHINE_EXTRA_RRECOMMENDS
-MACHINE_EXTRA_RRECOMMENDS:rpi = "kernel-modules brcm-firmware"
+MACHINE_EXTRA_RRECOMMENDS = "\
+    kernel-modules \
+    brcm-firmware \
+    kernel-module-display7 \
+"
