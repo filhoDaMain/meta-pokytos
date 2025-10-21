@@ -1,7 +1,7 @@
 #
 # Pokytos build configuration.
 # Check the available documentation at:
-# https://github.com/filhoDaMain/pokytos/tree/nanbield/Documentation
+# https://github.com/filhoDaMain/pokytos/tree/scarthgap/Documentation
 #
 
 
@@ -9,7 +9,7 @@
 # Machine Selection (target device)
 #
 # List of supported devices:
-# https://github.com/filhoDaMain/pokytos/blob/nanbield/Documentation/chapters/03_supported_devices.md
+# https://github.com/filhoDaMain/pokytos/blob/scarthgap/Documentation/chapters/03_supported_devices.md
 MACHINE ??= "raspberrypi3"
 
 
