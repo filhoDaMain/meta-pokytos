@@ -1,7 +1,7 @@
 SUMMARY = "Small image with console support"
 LICENSE = "MIT"
 
-inherit core-image
+inherit core-image image-buildinfo
 IMAGE_LINGUAS = " "
 
 IMAGE_INSTALL += "\
@@ -19,6 +19,8 @@ IMAGE_FEATURES += "\
 TOOLCHAIN_TARGET_TASK += "\
     kernel-devsrc \
 "
+
+require include/buildinfo.inc
 
 # Machine specific configurations if needed
 include include/${SOC_FAMILY}.inc
