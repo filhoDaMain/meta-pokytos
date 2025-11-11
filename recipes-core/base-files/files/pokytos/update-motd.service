@@ -1,0 +1,13 @@
+[Unit]
+Description=Update Message of the Day at boot time
+DefaultDependencies=no
+Before=getty.target multi-user.target
+After=local-fs.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/update_motd.sh
+RemainAfterExit=no
+
+[Install]
+WantedBy=multi-user.target
