@@ -10,7 +10,7 @@
 #
 # List of supported devices:
 # https://github.com/filhoDaMain/pokytos/blob/scarthgap/Documentation/chapters/03_supported_devices.md
-MACHINE ??= "raspberrypi3"
+MACHINE = "raspi3ap"
 
 
 #
