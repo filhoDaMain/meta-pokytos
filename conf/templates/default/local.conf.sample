@@ -53,13 +53,13 @@ BBMULTICONFIG = "developer"
 #
 # Where to place downloads
 #
-#DL_DIR ?= "${TOPDIR}/downloads"
+DL_DIR ?= "${HOME}/data/bitbake.downloads"
 
 
 #
 # Where to place shared-state files
 #
-#SSTATE_DIR ?= "${TOPDIR}/sstate-cache"
+SSTATE_DIR = "${HOME}/data/bitbake.sstate"
 
 
 #
