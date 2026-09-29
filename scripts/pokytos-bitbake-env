@@ -1,7 +1,4 @@
 #!/bin/sh
 
-# Source this file from poky basedir to configure Pokytos and all its layers
-
-export TEMPLATECONF=meta-pokytos/conf/templates/default
-. oe-init-build-env
-
+export TEMPLATECONF=../../layers/meta-pokytos/conf/templates/default
+. layers/openembedded-core/oe-init-build-env
