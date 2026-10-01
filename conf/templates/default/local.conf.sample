@@ -1,38 +1,19 @@
 #
-# Pokytos build configuration.
-# Check the available documentation at:
-# https://github.com/filhoDaMain/pokytos/tree/scarthgap/Documentation
+#  Refer to
+#    Yocto Reference Manual:
+#    https://docs.yoctoproject.org/scarthgap/ref-manual/index.html
+#
+#    Pokytos Documentation:
+#    https://github.com/filhoDaMain/pokytos/tree/scarthgap/Documentation
+#
+#
+#  Host machine related configurations should be made here:
+#    conf/site.conf
 #
 
-
-#
-# Machine Selection (target device)
-#
-# List of supported devices:
-# https://github.com/filhoDaMain/pokytos/blob/scarthgap/Documentation/chapters/03_supported_devices.md
-MACHINE = "raspi3ap"
-
-
-#
-# Extra image configurations
-#
-# NOTE: "debug-tweaks" allows booting into root with no password!
-EXTRA_IMAGE_FEATURES ?= "debug-tweaks"
-
-
-#
-# Distro selection
-#
+MACHINE ?= "qemu-raspi3ap"
 DISTRO ?= "pokytos"
-
-
-#
-# Alternate config for developer image variant
-#
-BBMULTICONFIG = "developer"
-
-
-#
-# CONF_VERSION is increased each time build/conf/ changes incompatibly
-#
 CONF_VERSION = "2"
+
+# TODO: Consider doing this only in developer multiconfig
+EXTRA_IMAGE_FEATURES ?= "debug-tweaks"
