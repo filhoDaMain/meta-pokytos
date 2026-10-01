@@ -4,5 +4,7 @@ export TEMPLATECONF=../../layers/meta-pokytos/conf/templates/default
 . layers/openembedded-core/oe-init-build-env
 
 # Create site.conf with default values.
-# This conf file can safely be modified by the user with their own settings.
-cp ../layers/meta-pokytos/conf/templates/default/site.conf.sample conf/site.conf
+# Don't override if it already exists in destination.
+if [ ! -f conf/site.conf ]; then
+    cp ../layers/meta-pokytos/conf/templates/default/site.conf.sample conf/site.conf
+fi
