@@ -31,7 +31,7 @@ do_install:append() {
     # "Create List of Static Device Nodes was skipped because of an unmet condition"
     # //TODO: Evaluate the possibility of PACKAGECONFIG:remove = "kmod"
     # Currently this service is being used by sun50i to load the wifi-bt modules
-    if [ "${@bb.utils.contains('DISTRO_FEATURES', 'configfs', 'True', 'False', d)}" = "False" ]; then
+    if [ "${@bb.utils.contains('DISTRO_FEATURES', 'kmod-static-nodes', 'True', 'False', d)}" = "False" ]; then
         rm -f ${D}${systemd_unitdir}/system/sysinit.target.wants/kmod-static-nodes.service
         rm -f ${D}${systemd_unitdir}/system/kmod-static-nodes.service
     fi
